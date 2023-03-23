@@ -19,9 +19,7 @@ def main(broker, topic):
     userdata = {'entero':0, 'real':0}
     client = Client(userdata=userdata)
     client.on_message = on_message
-    print('a')
     client.connect(broker)
-    print('a')
     client.subscribe(topic)
     client.loop_forever()
     
