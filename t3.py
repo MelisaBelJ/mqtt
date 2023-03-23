@@ -7,7 +7,7 @@ def on_message(mqttc,userdata,msg):
     with userdata['lock']:
         try:
             nombre = msg.topic[12:]
-            if not nombre in userdata:
+            if not nombre in userdata['datos']:
                 userdata['datos'][nombre] = []
             userdata['datos'][nombre].append(msg.payload)
         except:
