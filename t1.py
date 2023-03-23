@@ -10,7 +10,6 @@ def publicar(hostname, topic):
     
 def suscribir(hostname, topic):
     n_msg = int(input('Cuántos mensajes? '))
-
     print(f"Subcribing :{topic}:, {n_msg} messages")
     msgs = subscribe.simple(topic, 
                             msg_count = n_msg,
